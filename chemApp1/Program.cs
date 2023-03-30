@@ -12,7 +12,7 @@ namespace chemicalApp
     {
 
         //globel vearabals
-
+        int TimesRun = 0;
 
         //lists
 
@@ -25,9 +25,17 @@ namespace chemicalApp
             Console.WriteLine($"There are {germs} grems in this sample");
             Console.ReadLine();
 
+            
+            int chemE = 0;
+            for (int TimesRun = 0; TimesRun <= 5
+                ; TimesRun++)
+            {
+                //chemical efincy rating
+                chemE = randomnumber.Next(5000, germs);
 
-            //chemical efincy rating
-            int chemE = randomnumber.Next(5000, germs);
+                
+            }
+               
 
             //chemical list
 
@@ -38,7 +46,7 @@ namespace chemicalApp
             Console.WriteLine("\n10 seconds later...");
 
 
-
+            
             //Hypochlorite (Bleach) calculaion
             if (UserImput.Equals(1))
             {
@@ -48,6 +56,8 @@ namespace chemicalApp
                 Console.WriteLine($"in this test Bleach killed {chemE} of the {germs} germs in the sampil");
 
                 Console.WriteLine("this will now repet 4 more times");
+
+               
 
 
                 Console.ReadLine();
