@@ -14,9 +14,10 @@ namespace chemicalApp
         //globel vearabals
         int TimesRun = 0;
 
+
         //lists
 
-        static void Main(string[] args)
+        static void chemicalApp()
         {
             //gen ran num of germs in sampil
 
@@ -25,7 +26,7 @@ namespace chemicalApp
             Console.WriteLine($"There are {germs} grems in this sample");
             Console.ReadLine();
 
-            
+
             int chemE = 0;
             for (int TimesRun = 0; TimesRun <= 5
                 ; TimesRun++)
@@ -33,9 +34,9 @@ namespace chemicalApp
                 //chemical efincy rating
                 chemE = randomnumber.Next(5000, germs);
 
-                
+
             }
-               
+
 
             //chemical list
 
@@ -46,10 +47,12 @@ namespace chemicalApp
             Console.WriteLine("\n10 seconds later...");
 
 
-            
+
+
             //Hypochlorite (Bleach) calculaion
             if (UserImput.Equals(1))
             {
+                
 
                 Console.WriteLine("\nyou have chosin Hypochlorite (Bleach)");
 
@@ -57,7 +60,7 @@ namespace chemicalApp
 
                 Console.WriteLine("this will now repet 4 more times");
 
-               
+
 
 
                 Console.ReadLine();
@@ -114,13 +117,38 @@ namespace chemicalApp
             }
 
 
+            else if (UserImput > 5)
+            {
+                Console.WriteLine("please enter a number between 1 and 5");
 
+                
+            }
+
+
+
+
+        }
+            static void Main(string[] args)
+            {
+                string flag = "";
+                while (!flag.Equals("stop"))
+                {
+                    chemicalApp();
+
+                    Console.WriteLine("press Enter to add another chemical or type 'Stop' to end the program\n");
+                    flag = Console.ReadLine();
+                    
+
+                }
+
+
+            }
 
 
         }
 
 
 
-    }
+    
 
 }
