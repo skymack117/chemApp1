@@ -12,7 +12,7 @@ namespace chemicalApp
     {
 
         //globel vearabals
-        int TimesRun = 0;
+        int TimesRun = 1;
 
 
         //lists
@@ -27,23 +27,27 @@ namespace chemicalApp
             Console.ReadLine();
 
 
+
+            int TimesRun = 1;
             int chemE = 0;
-            for (int TimesRun = 0; TimesRun <= 5
-                ; TimesRun++)
-            {
-                //chemical efincy rating
-                chemE = randomnumber.Next(5000, germs);
+            chemE = randomnumber.Next(5000, germs);
 
 
-            }
 
-
+            
             //chemical list
 
 
             Console.WriteLine(" 1| Hypochlorite (Bleach) \n 2| Alcohols \n 3| Chlorine Dioxide \n 4| Hydrogen Peroxide \n 5| Iodophor Disinfectant\n\n");
             Console.WriteLine("plz enter a the number that the chemical you want to test is asind to\n");
+
+
+
             int UserImput = Convert.ToInt32(Console.ReadLine());
+
+           
+            
+
             Console.WriteLine("\n10 seconds later...");
 
 
@@ -52,18 +56,17 @@ namespace chemicalApp
             //Hypochlorite (Bleach) calculaion
             if (UserImput.Equals(1))
             {
-                
+
 
                 Console.WriteLine("\nyou have chosin Hypochlorite (Bleach)");
-
-                Console.WriteLine($"in this test Bleach killed {chemE} of the {germs} germs in the sampil");
-
-                Console.WriteLine("this will now repet 4 more times");
-
-
-
+                Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
+                Console.WriteLine("here are the five resolts");
 
                 Console.ReadLine();
+
+
+
+
 
 
 
@@ -75,8 +78,8 @@ namespace chemicalApp
             else if (UserImput.Equals(2))
             {
                 Console.WriteLine("\nyou have chosin Alcohol");
-
-                Console.WriteLine($"in this test Alcohol killed {chemE} of the {germs} germs in the sampil");
+                Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
+                Console.WriteLine("here are the five resolts");
 
                 Console.ReadLine();
 
@@ -87,19 +90,18 @@ namespace chemicalApp
             else if (UserImput.Equals(3))
             {
                 Console.WriteLine("\nyou have chosin Chlorine Dioxide");
-
-                Console.WriteLine($"in this test Chlorine Dioxide killed {chemE} of the {germs} germs in the sampil");
+                Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
+                Console.WriteLine("here are the five resolts");
 
                 Console.ReadLine();
             }
-
 
             //Hydrogen Peroxide
             else if (UserImput.Equals(4))
             {
                 Console.WriteLine("\nyou have chosin Hydrogen Peroxide");
-
-                Console.WriteLine($"in this test Hydrogen Peroxide killed {chemE} of the {germs} germs in the sampil");
+                Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
+                Console.WriteLine("here are the five resolts");
 
                 Console.ReadLine();
             }
@@ -108,10 +110,8 @@ namespace chemicalApp
             else if (UserImput.Equals(5))
             {
                 Console.WriteLine("\nyou have chosin Iodophor Disinfectant");
-
-                Console.WriteLine($"in this test Iodophor Disinfectant killed {chemE} of the {germs} germs in the sampil");
-
-
+                Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
+                Console.WriteLine("here are the five resolts");
 
                 Console.ReadLine();
             }
@@ -121,10 +121,18 @@ namespace chemicalApp
             {
                 Console.WriteLine("please enter a number between 1 and 5");
 
-                
+
             }
 
 
+            
+            for (TimesRun = 1; TimesRun <= 5
+                ; TimesRun++)
+            {
+                //chemical efincy rating
+                chemE = randomnumber.Next(5000, germs);
+                Console.WriteLine($"|{TimesRun}| chemical Efish = {chemE}");
+            }
 
 
         }
