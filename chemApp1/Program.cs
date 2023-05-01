@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +17,40 @@ namespace chemicalApp
 
         //lists
 
+        static int checkChem()
+        {
+            while (true)
+            {
+                //chemical list
+
+
+                Console.WriteLine(" 1| Hypochlorite (Bleach) \n 2| Alcohols \n 3| Chlorine Dioxide \n 4| Hydrogen Peroxide \n 5| Iodophor Disinfectant\n\n");
+                Console.WriteLine("plz enter a the number that the chemical you want to test is asind to\n");
+
+
+
+
+
+
+
+                int UserImput = Convert.ToInt32(Console.ReadLine());
+
+                if (UserImput >= 1 && UserImput <= 5)
+                {
+                    return UserImput;
+
+
+                }
+                Console.WriteLine("plz enter a number between 1 and 5 thank you");
+
+
+            }
+
+
+        }
         static void chemicalApp()
         {
+            int chosinChem = checkChem();  
             //gen ran num of germs in sampil
 
             Random randomnumber = new Random();
@@ -30,35 +62,28 @@ namespace chemicalApp
 
             int TimesRun = 1;
             int chemE = 0;
-            chemE = randomnumber.Next(5000, germs);
+            chemE = randomnumber.Next(0, germs);
 
 
 
             
-            //chemical list
-
-
-            Console.WriteLine(" 1| Hypochlorite (Bleach) \n 2| Alcohols \n 3| Chlorine Dioxide \n 4| Hydrogen Peroxide \n 5| Iodophor Disinfectant\n\n");
-            Console.WriteLine("plz enter a the number that the chemical you want to test is asind to\n");
-
-
-
-            int UserImput = Convert.ToInt32(Console.ReadLine());
-
-           
             
 
-            Console.WriteLine("\n10 seconds later...");
+
+
+
+            
 
 
 
 
             //Hypochlorite (Bleach) calculaion
-            if (UserImput.Equals(1))
+            if (chosinChem.Equals(1))
             {
 
 
                 Console.WriteLine("\nyou have chosin Hypochlorite (Bleach)");
+                Console.WriteLine("\n10 seconds later...");
                 Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
                 Console.WriteLine("here are the five resolts");
 
@@ -75,9 +100,10 @@ namespace chemicalApp
 
 
             //alcohol
-            else if (UserImput.Equals(2))
+            else if (chosinChem.Equals(2))
             {
                 Console.WriteLine("\nyou have chosin Alcohol");
+                Console.WriteLine("\n10 seconds later...");
                 Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
                 Console.WriteLine("here are the five resolts");
 
@@ -87,9 +113,10 @@ namespace chemicalApp
 
 
             //Chlorine Dioxide
-            else if (UserImput.Equals(3))
+            else if (chosinChem.Equals(3))
             {
                 Console.WriteLine("\nyou have chosin Chlorine Dioxide");
+                Console.WriteLine("\n10 seconds later...");
                 Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
                 Console.WriteLine("here are the five resolts");
 
@@ -97,7 +124,7 @@ namespace chemicalApp
             }
 
             //Hydrogen Peroxide
-            else if (UserImput.Equals(4))
+            else if (chosinChem.Equals(4))
             {
                 Console.WriteLine("\nyou have chosin Hydrogen Peroxide");
                 Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
@@ -107,9 +134,10 @@ namespace chemicalApp
             }
 
             //Iodophor Disinfectant
-            else if (UserImput.Equals(5))
+            else if (chosinChem.Equals(5))
             {
                 Console.WriteLine("\nyou have chosin Iodophor Disinfectant");
+                Console.WriteLine("\n10 seconds later...");
                 Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
                 Console.WriteLine("here are the five resolts");
 
@@ -117,12 +145,6 @@ namespace chemicalApp
             }
 
 
-            else if (UserImput > 5)
-            {
-                Console.WriteLine("please enter a number between 1 and 5");
-
-
-            }
 
 
             
@@ -134,7 +156,7 @@ namespace chemicalApp
                 Console.WriteLine($"|{TimesRun}| chemical Efish = {chemE}");
             }
 
-
+            
         }
             static void Main(string[] args)
             {
