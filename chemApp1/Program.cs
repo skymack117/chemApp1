@@ -23,6 +23,17 @@ namespace chemicalApp
             {
                 //chemical list
 
+                Console.WriteLine(@"        __                   _            _____" + "\n" +
+                                  @"  _____/ /_  ___  ____ ___  (_)________ _/ /   |  ____  ____" + "\n" +
+                                  @" / ___/ __ \/ _ \/ __ `__ \/ / ___/ __ `/ / /| | / __ \/ __ \" + "\n" +
+                                  @"/ /__/ / / /  __/ / / / / / / /__/ /_/ / / ___ |/ /_/ / /_/ /" + "\n" +
+                                  @"\___/_/ /_/\___/_/ /_/ /_/_/\___/\__,_/_/_/  |_/ .___/ .___/" + "\n" +
+                                  @"                                              /_/   /_/" + "\n");
+                Console.WriteLine("--------------------------------------------------------------");
+
+                Console.WriteLine("Hi there, this is chemicalApp and he is here to help! \nHe can calculate the efficiency of various cleaning chemicals ");
+
+                Console.WriteLine("--------------------------------------------------------------\n");
 
                 Console.WriteLine(" 1| Hypochlorite (Bleach) \n 2| Alcohols \n 3| Chlorine Dioxide \n 4| Hydrogen Peroxide \n 5| Iodophor Disinfectant\n\n");
                 Console.WriteLine("plz enter a the number that the chemical you want to test is asind to\n");
@@ -147,7 +158,7 @@ namespace chemicalApp
 
 
 
-            
+            // times run conter
             for (TimesRun = 1; TimesRun <= 5
                 ; TimesRun++)
             {
@@ -157,7 +168,8 @@ namespace chemicalApp
             }
 
             
-        }
+        } 
+            //
             static void Main(string[] args)
             {
                 string flag = "";
