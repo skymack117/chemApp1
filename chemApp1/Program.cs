@@ -31,12 +31,13 @@ namespace chemicalApp
                                   @"                                              /_/   /_/" + "\n");
                 Console.WriteLine("--------------------------------------------------------------");
 
-                Console.WriteLine("Hi there, this is chemicalApp and he is here to help! \nHe can calculate the efficiency of various cleaning chemicals ");
+                Console.WriteLine("Hi there, this is chemicalApp and he is here to help!\nHe can calculate the efficiency of various cleaning chemicals ");
 
                 Console.WriteLine("--------------------------------------------------------------\n");
 
                 Console.WriteLine(" 1| Hypochlorite (Bleach) \n 2| Alcohols \n 3| Chlorine Dioxide \n 4| Hydrogen Peroxide \n 5| Iodophor Disinfectant\n\n");
-                Console.WriteLine("plz enter a the number that the chemical you want to test is asind to\n");
+                Console.WriteLine("plz enter a the number that the chemical you want to test is assigned to\n");
+                
 
 
 
@@ -56,8 +57,7 @@ namespace chemicalApp
 
 
             }
-
-
+            
         }
         static void chemicalApp()
         {
@@ -154,7 +154,7 @@ namespace chemicalApp
 
                 Console.ReadLine();
             }
-
+            
 
 
 
@@ -166,14 +166,16 @@ namespace chemicalApp
                 chemE = randomnumber.Next(5000, germs);
                 Console.WriteLine($"|{TimesRun}| chemical Efish = {chemE}");
             }
-
             
+
         } 
             //
             static void Main(string[] args)
             {
-                string flag = "";
-                while (!flag.Equals("stop"))
+            
+            string flag = "";
+            
+            while (!flag.Equals("stop"))
                 {
                     chemicalApp();
 
