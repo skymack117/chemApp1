@@ -22,18 +22,19 @@ namespace chemicalApp
             while (true)
             {
                 //chemical list
-
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine(@"        __                   _            _____" + "\n" +
                                   @"  _____/ /_  ___  ____ ___  (_)________ _/ /   |  ____  ____" + "\n" +
                                   @" / ___/ __ \/ _ \/ __ `__ \/ / ___/ __ `/ / /| | / __ \/ __ \" + "\n" +
                                   @"/ /__/ / / /  __/ / / / / / / /__/ /_/ / / ___ |/ /_/ / /_/ /" + "\n" +
                                   @"\___/_/ /_/\___/_/ /_/ /_/_/\___/\__,_/_/_/  |_/ .___/ .___/" + "\n" +
                                   @"                                              /_/   /_/" + "\n");
-                Console.WriteLine("--------------------------------------------------------------");
+                Console.ForegroundColor= ConsoleColor.White;
+                Console.WriteLine("---------------------------------------------------------------");
 
-                Console.WriteLine("Hi there, this is chemicalApp and he is here to help!\nHe can calculate the efficiency of various cleaning chemicals ");
+                Console.WriteLine("Hi there, this is chemicalApp and he is here to help!\nHe can calculate the efficiency of various cleaning chemicals.\n                         Enjoy! ");
 
-                Console.WriteLine("--------------------------------------------------------------\n");
+                Console.WriteLine("---------------------------------------------------------------\n");
 
                 Console.WriteLine(" 1| Hypochlorite (Bleach) \n 2| Alcohols \n 3| Chlorine Dioxide \n 4| Hydrogen Peroxide \n 5| Iodophor Disinfectant\n\n");
                 Console.WriteLine("plz enter a the number that the chemical you want to test is assigned to\n");
@@ -46,16 +47,19 @@ namespace chemicalApp
 
 
                 int UserImput = Convert.ToInt32(Console.ReadLine());
-
+                Console.Clear();
                 if (UserImput >= 1 && UserImput <= 5)
                 {
+                    
                     return UserImput;
 
-
+               
                 }
-                Console.WriteLine("plz enter a number between 1 and 5 thank you");
-
-
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+                Console.WriteLine("ERROR plz enter a number between 1 and 5 thank you\n");
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+                Console.ForegroundColor = ConsoleColor.White;
             }
             
         }
@@ -77,17 +81,6 @@ namespace chemicalApp
 
 
 
-            
-            
-
-
-
-
-            
-
-
-
-
             //Hypochlorite (Bleach) calculaion
             if (chosinChem.Equals(1))
             {
@@ -99,13 +92,6 @@ namespace chemicalApp
                 Console.WriteLine("here are the five resolts");
 
                 Console.ReadLine();
-
-
-
-
-
-
-
 
             }
 
@@ -138,6 +124,7 @@ namespace chemicalApp
             else if (chosinChem.Equals(4))
             {
                 Console.WriteLine("\nyou have chosin Hydrogen Peroxide");
+                Console.WriteLine("\n10 seconds later...");
                 Console.WriteLine($"\nreminder there are {germs} germs in this sampill");
                 Console.WriteLine("here are the five resolts");
 
@@ -169,7 +156,7 @@ namespace chemicalApp
             
 
         } 
-            //
+            //main while loop
             static void Main(string[] args)
             {
             
@@ -178,21 +165,15 @@ namespace chemicalApp
             while (!flag.Equals("stop"))
                 {
                     chemicalApp();
-
+                    
                     Console.WriteLine("press Enter to add another chemical or type 'Stop' to end the program\n");
                     flag = Console.ReadLine();
-                    
 
+                    Console.Clear();
                 }
-
 
             }
 
-
         }
-
-
-
-    
 
 }
